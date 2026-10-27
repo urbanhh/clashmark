@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "urbanhh-clashmark"
+version = "0.1.0"
+description = "在同一份提示词中检测长度、格式、内容、包含关系四类互相矛盾的要求，原样并排呈现双方"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "urbanhh" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://urbanhh.github.io"
+Repository = "https://github.com/urbanhh/clashmark"
+Issues = "https://github.com/urbanhh/clashmark/issues"
+
+[project.scripts]
+clashmark = "clashmark:main"
+
+[tool.setuptools]
+py-modules = ["clashmark"]
